@@ -1,0 +1,113 @@
+.parent-element {
+    height: 400px;
+    width: 400px;
+    background-color: yellow;
+    position: relative;
+
+    /* transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: 2s; */
+    transition: all 0.3s linear 2s;
+}
+.child-element {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    transition: all 0.8s linear;
+}
+
+.hello {
+    color:red;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 3s;
+    display: inline-block
+}
+
+/* hover effects */
+.parent-element:hover {
+    background-color: lightblue; 
+}
+.child-element:hover {
+    background-color: blue;
+    transform:translate(-50%,-50%) rotate(0deg);
+    cursor: pointer;
+}
+/* .parent-element:hover .child-element {
+    background-color: chartreuse;
+} */
+.hello:hover {
+    color: blue;
+    font-size: 35px;
+    opacity: 40%;
+}
+
+
+/* keyframe animation */
+.image-car {
+    height: 100px;
+    /* animation-name: carmove;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-direction: alternate; */
+    animation: carmove2 5s alternate 2s infinite;
+    /* position: absolute; */
+}
+.animation-block {
+    /* position: relative; */
+}
+
+
+/* 1 example */
+/* @keyframes carmove {
+    from {left: 0px}
+    to {left: 800px};
+} */
+
+/* 2 example */
+/* @keyframes carmove2 {
+    0% {left:0px}
+    20% {left:200px}
+    50% {left:400px}
+    80% {left:600px}
+    100% {left:800px}
+} */
+
+/* keyframes width transform:translate */
+@keyframes carmove2 {
+    0% {transform:translateX(0px) rotate(0deg)}
+    20% {transform:translateX(200px) rotate(360deg)}
+    50% {transform:translateX(400px) rotate(45deg)}
+    80% {transform:translateX(600px) rotate(0deg)}
+    100% {transform:translateX(800px) rotate(360deg)}
+}
+
+
+
+/* hw5 */
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+.left-block {
+    display: inline-block;
+    width: 760px;
+    vertical-align: top;
+    margin-right: 40px;
+}
+.right-block {
+    display: inline-block;
+    width: 360px;
+    vertical-align: top;
+}
+.image-block:nth-child(2) {
+    margin: 102px 0;
+}
+
+
